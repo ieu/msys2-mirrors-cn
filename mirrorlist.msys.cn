@@ -1,0 +1,14 @@
+##
+## MSYS2 repository mirrorlist
+##
+
+## China
+Server = https://mirror.bit.edu.cn/msys2/msys/$arch/
+Server = https://mirrors.ustc.edu.cn/msys2/msys/$arch/
+Server = https://mirror.bit.edu.cn/msys2/msys/$arch/
+Server = https://mirrors.bfsu.edu.cn/msys2/msys/$arch/
+Server = https://mirrors.sjtug.sjtu.edu.cn/msys2/msys/$arch/
+Server = https://mirrors.nju.edu.cn/msys2/msys/$arch/
+Server = https://mirrors.huaweicloud.com/msys2/msys/$arch/
+Server = https://mirrors.cloud.tencent.com/msys2/msys/$arch/
+Server = https://mirrors.zju.edu.cn/msys2/msys/$arch/
