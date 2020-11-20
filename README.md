@@ -69,4 +69,3 @@ $ makepkg -c
 * [南京大学开源镜像站](https://mirrors.nju.edu.cn/)
 * [华为开源镜像站](https://mirrors.huaweicloud.com/)
 * [腾讯软件源](https://mirrors.cloud.tencent.com/)
-* [浙江大学开源镜像站](https://mirrors.zju.edu.cn/)

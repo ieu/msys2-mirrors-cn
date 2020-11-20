@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar.xz'
 pkgname=pacman-mirrors-cn
-pkgver=20201119
+pkgver=20201120
 pkgrel=1
 pkgdesc='MSYS2 mirror list for use by pacman in China'
 arch=('any')
@@ -9,9 +9,9 @@ license=('GPL')
 source=(mirrorlist.msys.cn
         mirrorlist.mingw32.cn
         mirrorlist.mingw64.cn)
-sha256sums=('863eb60935f0134774f2e655730f73d2bc05007d0c4488a62f852e43b5e8f48c'
-            '847340e19c82dd587c976be217561cc9bd86cf486acbfa5b8c6bcd60a0845fe5'
-            'ad8327d1175710206f48900750d0e5d9b73dd5cd6bc66071ed9abb685b4506cc')
+sha256sums=('a27b6b31f6172ab4bdd60f134061e4be7dd988f1e1ccbee05a1ec8bfa0fe562a'
+            'fca513ec069316f47aa5a4daa9da7833aa7a37b8fcd0ce476fb6e70d899d4e3f'
+            '2ad4826c16e132bb218ef7a6fc3a073b73f8d0cac842261249d6ede905de2e7c')
 
 package() {
   mkdir -p ${pkgdir}/etc/pacman.d
