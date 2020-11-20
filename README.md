@@ -2,6 +2,8 @@ MSYS2 中国镜像站
 
 ## 使用方法
 
+### 使用 pacman
+
 1. 下载[镜像包](https://github.com/ieu/msys2-mirrors-cn/releases)
 
 2. 安装软件包
@@ -10,7 +12,17 @@ MSYS2 中国镜像站
 # pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar
 ```
 
-3. 编辑 `/etc/pacman.conf` 在原镜像列表前添加镜像文件 `/etc/pacman.d/mirrorlist.{mingw{32,64},msys}.cn`
+3. 开始使用
+
+```shell
+# pacman -Syu
+```
+
+### 手动设置
+
+1. 下载并保存文件 `mirrorlist.mingw32.cn`、 `mirrorlist.mingw32.cn`、 `mirrorlist.msys.cn` 至 `/etc/pacman.conf`
+
+2. 编辑 `/etc/pacman.conf` 在原镜像列表前添加镜像文件 `/etc/pacman.d/mirrorlist.{mingw{32,64},msys}.cn`
 
 示例：
 ```ini

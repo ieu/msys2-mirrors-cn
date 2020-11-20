@@ -1,0 +1,19 @@
+post_install() {
+	sed -i -e '/^\[mingw32\]$/{
+		a # #IHA7G7KU#BEGIN# Mirrors in China
+		a Include = /etc/pacman.d/mirrorlist.mingw32.cn
+		a # #IHA7G7KU#END# Mirrors in China
+	}' -e '/^\[mingw64\]$/{
+		a # #IHA7G7KU#BEGIN# Mirrors in China
+		a Include = /etc/pacman.d/mirrorlist.mingw64.cn
+		a # #IHA7G7KU#END# Mirrors in China
+	}' -e '/^\[msys\]$/{
+		a # #IHA7G7KU#BEGIN# Mirrors in China
+		a Include = /etc/pacman.d/mirrorlist.msys.cn
+		a # #IHA7G7KU#END# Mirrors in China
+	}' /etc/pacman.conf
+}
+
+post_remove() {
+	sed -i '/#IHA7G7KU#BEGIN#/,/#IHA7G7KU#END#/d' /etc/pacman.conf
+}

@@ -1,11 +1,12 @@
 PKGEXT='.pkg.tar.xz'
 pkgname=pacman-mirrors-cn
 pkgver=20201120
-pkgrel=2
+pkgrel=3
 pkgdesc='MSYS2 mirror list for use by pacman in China'
 arch=('any')
 url='https://github.com/ieu/msys2-mirrors-cn'
 license=('GPL')
+install="${pkgname}.install"
 source=(mirrorlist.msys.cn
         mirrorlist.mingw32.cn
         mirrorlist.mingw64.cn)
