@@ -20,7 +20,7 @@ MSYS2 中国镜像站
 
 ### 手动设置
 
-1. 下载并保存文件 `mirrorlist.mingw32.cn`、 `mirrorlist.mingw32.cn`、 `mirrorlist.msys.cn` 至 `/etc/pacman.conf`
+1. 下载并保存文件 `mirrorlist.mingw32.cn`、 `mirrorlist.mingw32.cn`、 `mirrorlist.msys.cn` 至 `/etc/pacman.d`
 
 2. 编辑 `/etc/pacman.conf` 在原镜像列表前添加镜像文件 `/etc/pacman.d/mirrorlist.{mingw{32,64},msys}.cn`
 
