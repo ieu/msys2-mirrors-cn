@@ -1,5 +1,7 @@
 MSYS2 中国镜像站
 
+[English](./README.en.md)
+
 ## 使用方法
 
 ### 使用 pacman
