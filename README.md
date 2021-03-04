@@ -77,7 +77,6 @@ $ makepkg -c
 
 * [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
 * [中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/)
-* [北京理工大学开源软件镜像服务](https://mirror.bit.edu.cn/)
 * [北京外国语大学开源软件镜像站](https://mirrors.bfsu.edu.cn/)
 * [上海交通大学 Linux 用户组 软件源镜像服务](https://mirrors.sjtug.sjtu.edu.cn/)
 * [南京大学开源镜像站](https://mirrors.nju.edu.cn/)

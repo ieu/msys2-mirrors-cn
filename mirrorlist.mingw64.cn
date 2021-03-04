@@ -3,9 +3,7 @@
 ##
 
 ## China
-Server = https://mirror.bit.edu.cn/msys2/mingw/x86_64/
 Server = https://mirrors.ustc.edu.cn/msys2/mingw/x86_64/
-Server = https://mirror.bit.edu.cn/msys2/mingw/x86_64/
 Server = https://mirrors.bfsu.edu.cn/msys2/mingw/x86_64/
 Server = https://mirrors.sjtug.sjtu.edu.cn/msys2/mingw/x86_64/
 Server = https://mirrors.nju.edu.cn/msys2/mingw/x86_64/

@@ -76,7 +76,6 @@ $ makepkg -c
 
 * [TU Open Source Software Mirrors](https://mirrors.tuna.tsinghua.edu.cn/)
 * [USTC Open Source Software Mirrors](https://mirrors.ustc.edu.cn/)
-* [BIT Open Source Software Mirrors](https://mirror.bit.edu.cn/)
 * [BFSU Open Source Software Mirrors](https://mirrors.bfsu.edu.cn/)
 * [SJTU Linux User Group Software Source Mirrors](https://mirrors.sjtug.sjtu.edu.cn/)
 * [NJU Open Source Mirrors](https://mirrors.nju.edu.cn/)
