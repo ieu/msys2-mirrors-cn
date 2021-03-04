@@ -11,7 +11,7 @@ MSYS2 mirrors in China
 2. Install using `pacman`
 
 ```shell
-# pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar
+# pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar.xz
 ```
 
 3. Start using it

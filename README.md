@@ -11,7 +11,7 @@ MSYS2 中国镜像站
 2. 安装软件包
 
 ```shell
-# pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar
+# pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar.xz
 ```
 
 3. 开始使用
