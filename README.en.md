@@ -4,7 +4,7 @@ MSYS2 mirrors in China
 
 ## Usage
 
-### Use pacman
+### Use `pacman`
 
 1. Download package from [release page](https://github.com/ieu/msys2-mirrors-cn/releases)
 
@@ -22,9 +22,9 @@ MSYS2 mirrors in China
 
 ### Manually
 
-1. Download file `mirrorlist.mingw32.cn`, `mirrorlist.mingw32.cn` and `mirrorlist.msys.cn` then save to `/etc/pacman.d`
+1. Download and save `mirrorlist`(s) you need to `/etc/pacman.d/`
 
-2. Put mirror list at head of every repo like this:
+2. Edit `/etc/pacman.conf` and add `mirrorlist`(s) on top of `mirrorlist` list of corresponding repo as below:
 
 ```ini
 [mingw32]
@@ -35,14 +35,23 @@ Include = /etc/pacman.d/mirrorlist.mingw32
 Include = /etc/pacman.d/mirrorlist.mingw64.cn
 Include = /etc/pacman.d/mirrorlist.mingw64
 
+[ucrt64]
+Include = /etc/pacman.d/mirrorlist.ucrt64.cn
+Include = /etc/pacman.d/mirrorlist.ucrt64
+
+[clang64]
+Include = /etc/pacman.d/mirrorlist.clang64.cn
+Include = /etc/pacman.d/mirrorlist.clang64
+
 [msys]
 Include = /etc/pacman.d/mirrorlist.msys.cn
 Include = /etc/pacman.d/mirrorlist.msys
 ```
 
-Or do it with one line command (using `sed`)：
+You can add all `mirrorlist`s to `pacman.conf` with one line command using `sed`
+
 ```shell
-sed -i 's/^\[\(mingw32\|mingw64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirrorlist.\1.cn/' /etc/pacman.conf
+# sed -i 's/^\[\(mingw32\|mingw64\|ucrt64\|clang64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirrorlist.\1.cn/' /etc/pacman.conf
 ```
 
 3. Start using it
@@ -51,7 +60,7 @@ sed -i 's/^\[\(mingw32\|mingw64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirror
 # pacman -Syu
 ```
 
-## Package from source code
+## Build package from source code
 
 1. Install toolchain
 
@@ -65,14 +74,13 @@ sed -i 's/^\[\(mingw32\|mingw64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirror
 $ git clone https://github.com/ieu/msys2-mirrors-cn.git
 ```
 
-3. package
+3. Build package
 
 ```shell
-$ cd msys2-mirrors-cn
-$ makepkg -c
+$ makepkg
 ```
 
-## Collected mirrors
+## Mirrors provided
 
 * [TU Open Source Software Mirrors](https://mirrors.tuna.tsinghua.edu.cn/)
 * [USTC Open Source Software Mirrors](https://mirrors.ustc.edu.cn/)

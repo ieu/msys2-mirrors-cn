@@ -4,11 +4,11 @@ MSYS2 中国镜像站
 
 ## 使用方法
 
-### 使用 pacman
+### 使用 `pacman`
 
-1. 下载[镜像包](https://github.com/ieu/msys2-mirrors-cn/releases)
+1. 从 [release page](https://github.com/ieu/msys2-mirrors-cn/releases) 下载镜像包
 
-2. 安装软件包
+2. 使用 `pacman` 安装镜像包
 
 ```shell
 # pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar.xz
@@ -22,9 +22,9 @@ MSYS2 中国镜像站
 
 ### 手动设置
 
-1. 下载并保存文件 `mirrorlist.mingw32.cn`、 `mirrorlist.mingw32.cn`、 `mirrorlist.msys.cn` 至 `/etc/pacman.d`
+1. 下载所需镜像列表文件并保存至 `/etc/pacman.d/`
 
-2. 编辑 `/etc/pacman.conf` 在原镜像列表前添加镜像文件 `/etc/pacman.d/mirrorlist.{mingw{32,64},msys}.cn`
+2. 编辑 `/etc/pacman.conf`，在对应仓库镜像列表前添加上述镜像列表文件
 
 示例：
 ```ini
@@ -36,14 +36,23 @@ Include = /etc/pacman.d/mirrorlist.mingw32
 Include = /etc/pacman.d/mirrorlist.mingw64.cn
 Include = /etc/pacman.d/mirrorlist.mingw64
 
+[ucrt64]
+Include = /etc/pacman.d/mirrorlist.ucrt64.cn
+Include = /etc/pacman.d/mirrorlist.ucrt64
+
+[clang64]
+Include = /etc/pacman.d/mirrorlist.clang64.cn
+Include = /etc/pacman.d/mirrorlist.clang64
+
 [msys]
 Include = /etc/pacman.d/mirrorlist.msys.cn
 Include = /etc/pacman.d/mirrorlist.msys
 ```
 
-一行编辑命令（使用 `sed`）：
+使用 `sed` 可快速添加镜像列表文件
+
 ```shell
-sed -i 's/^\[\(mingw32\|mingw64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirrorlist.\1.cn/' /etc/pacman.conf
+# sed -i 's/^\[\(mingw32\|mingw64\|ucrt64\|clang64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirrorlist.\1.cn/' /etc/pacman.conf
 ```
 
 4. 开始使用
@@ -52,7 +61,7 @@ sed -i 's/^\[\(mingw32\|mingw64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirror
 # pacman -Syu
 ```
 
-## 从源代码打包
+## 从源码构建镜像包
 
 1. 安装 toolchain
 
@@ -69,8 +78,7 @@ $ git clone https://github.com/ieu/msys2-mirrors-cn.git
 3. 打包
 
 ```shell
-$ cd msys2-mirrors-cn
-$ makepkg -c
+$ makepkg
 ```
 
 ## 收录站点
