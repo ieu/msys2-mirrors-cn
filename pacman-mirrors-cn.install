@@ -25,3 +25,8 @@ post_install() {
 post_remove() {
 	sed -i '/#IHA7G7KU#BEGIN#/,/#IHA7G7KU#END#/d' /etc/pacman.conf
 }
+
+post_upgrade() {
+	post_remove
+	post_install
+}
