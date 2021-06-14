@@ -7,6 +7,14 @@ post_install() {
 		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.mingw64.cn
 		a # #IHA7G7KU#END# Mirrors in China
+	}' -e '/^\[ucrt64\]$/{
+		a # #IHA7G7KU#BEGIN# Mirrors in China
+		a Include = /etc/pacman.d/mirrorlist.ucrt64.cn
+		a # #IHA7G7KU#END# Mirrors in China
+	}' -e '/^\[clang64\]$/{
+		a # #IHA7G7KU#BEGIN# Mirrors in China
+		a Include = /etc/pacman.d/mirrorlist.clang64.cn
+		a # #IHA7G7KU#END# Mirrors in China
 	}' -e '/^\[msys\]$/{
 		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.msys.cn
