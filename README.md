@@ -9,7 +9,7 @@ MSYS2 中国镜像站
 0. 快速安装
 
 ```shell
-# ( PKGVER=20210614 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
+( PKGVER=20210614 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
 ```
 
 1. 从 [release page](https://github.com/ieu/msys2-mirrors-cn/releases) 下载镜像包
