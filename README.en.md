@@ -4,13 +4,13 @@ MSYS2 mirrors in China
 
 ## Usage
 
-### Use prebuilt package
-
-0. Quick install
+### Quick install
 
 ```shell
 ( PKGVER=20210614 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
 ```
+
+### Use prebuilt package
 
 1. Download package from [release page](https://github.com/ieu/msys2-mirrors-cn/releases)
 
