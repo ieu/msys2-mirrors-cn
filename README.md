@@ -4,7 +4,7 @@ MSYS2 中国镜像站
 
 ## 使用方法
 
-### 使用 `pacman`
+### 安装预构建镜像包
 
 1. 从 [release page](https://github.com/ieu/msys2-mirrors-cn/releases) 下载镜像包
 

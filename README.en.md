@@ -4,7 +4,7 @@ MSYS2 mirrors in China
 
 ## Usage
 
-### Use `pacman`
+### Install prebuilt package
 
 1. Download package from [release page](https://github.com/ieu/msys2-mirrors-cn/releases)
 
@@ -20,7 +20,7 @@ MSYS2 mirrors in China
 # pacman -Syu
 ```
 
-### Manually
+### Configure manually
 
 1. Download and save `mirrorlist`(s) you need to `/etc/pacman.d/`
 
