@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar.xz'
 pkgname=pacman-mirrors-cn
-pkgver=20210614
+pkgver=20210619
 pkgrel=1
 pkgdesc='MSYS2 mirror list for use by pacman in China'
 arch=('any')

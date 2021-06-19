@@ -1,32 +1,27 @@
 post_install() {
 	sed -i -e '/^\[mingw32\]$/{
-		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.mingw32.cn
-		a # #IHA7G7KU#END# Mirrors in China
 	}' -e '/^\[mingw64\]$/{
-		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.mingw64.cn
-		a # #IHA7G7KU#END# Mirrors in China
 	}' -e '/^\[ucrt64\]$/{
-		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.ucrt64.cn
-		a # #IHA7G7KU#END# Mirrors in China
 	}' -e '/^\[clang64\]$/{
-		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.clang64.cn
-		a # #IHA7G7KU#END# Mirrors in China
 	}' -e '/^\[msys\]$/{
-		a # #IHA7G7KU#BEGIN# Mirrors in China
 		a Include = /etc/pacman.d/mirrorlist.msys.cn
-		a # #IHA7G7KU#END# Mirrors in China
 	}' /etc/pacman.conf
 }
 
 post_remove() {
-	sed -i '/#IHA7G7KU#BEGIN#/,/#IHA7G7KU#END#/d' /etc/pacman.conf
-}
-
-post_upgrade() {
-	post_remove
-	post_install
+	sed -i -e '/^\[mingw32\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw32\.cn$/d
+	}' -e '/^\[mingw64\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw64\.cn$/d
+	}' -e '/^\[ucrt64\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.ucrt64\.cn$/d
+	}' -e '/^\[clang64\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.clang64\.cn$/d
+	}' -e '/^\[msys\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.msys\.cn$/d
+	}' /etc/pacman.conf
 }
