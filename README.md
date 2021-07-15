@@ -7,7 +7,7 @@ MSYS2 中国镜像站
 ### 快速安装
 
 ```shell
-( PKGVER=20210619 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
+( PKGVER=20210715 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
 ```
 
 ### 使用预构建镜像包
@@ -17,13 +17,13 @@ MSYS2 中国镜像站
 2. 使用 `pacman` 安装镜像包
 
 ```shell
-# pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar.xz
+pacman -U pacman-mirrors-cn-${pkgver}-${pkgrel}-any.pkg.tar.xz
 ```
 
 3. 开始使用
 
 ```shell
-# pacman -Syu
+pacman -Syu
 ```
 
 ### 手动设置
@@ -35,20 +35,20 @@ MSYS2 中国镜像站
 示例：
 ```ini
 [mingw32]
-Include = /etc/pacman.d/mirrorlist.mingw32.cn
-Include = /etc/pacman.d/mirrorlist.mingw32
+Include = /etc/pacman.d/mirrorlist.mingw.cn
+Include = /etc/pacman.d/mirrorlist.mingw
 
 [mingw64]
-Include = /etc/pacman.d/mirrorlist.mingw64.cn
-Include = /etc/pacman.d/mirrorlist.mingw64
+Include = /etc/pacman.d/mirrorlist.mingw.cn
+Include = /etc/pacman.d/mirrorlist.mingw
 
 [ucrt64]
-Include = /etc/pacman.d/mirrorlist.ucrt64.cn
-Include = /etc/pacman.d/mirrorlist.ucrt64
+Include = /etc/pacman.d/mirrorlist.mingw.cn
+Include = /etc/pacman.d/mirrorlist.mingw
 
 [clang64]
-Include = /etc/pacman.d/mirrorlist.clang64.cn
-Include = /etc/pacman.d/mirrorlist.clang64
+Include = /etc/pacman.d/mirrorlist.mingw.cn
+Include = /etc/pacman.d/mirrorlist.mingw
 
 [msys]
 Include = /etc/pacman.d/mirrorlist.msys.cn
@@ -58,13 +58,13 @@ Include = /etc/pacman.d/mirrorlist.msys
 使用 `sed` 可快速添加镜像列表文件
 
 ```shell
-# sed -i 's/^\[\(mingw32\|mingw64\|ucrt64\|clang64\|msys\)\]$/\0\nInclude = \/etc\/pacman.d\/mirrorlist.\1.cn/' /etc/pacman.conf
+sed -e '/^\[\(mingw32\|mingw64\|ucrt64\|clang64\)\]$/a Include = \/etc\/pacman.d\/mirrorlist.mingw.cn' -e '/^\[msys\]$/a Include = \/etc\/pacman.d\/mirrorlist.msys.cn' -i /etc/pacman.conf
 ```
 
 4. 开始使用
 
 ```shell
-# pacman -Syu
+pacman -Syu
 ```
 
 ## 从源码构建镜像包
@@ -72,19 +72,19 @@ Include = /etc/pacman.d/mirrorlist.msys
 1. 安装 toolchain
 
 ```shell
-# pacman -S binutils
+pacman -S binutils
 ```
 
 2. 克隆代码
 
 ```shell
-$ git clone https://github.com/ieu/msys2-mirrors-cn.git
+git clone https://github.com/ieu/msys2-mirrors-cn.git
 ```
 
 3. 打包
 
 ```shell
-$ makepkg
+makepkg
 ```
 
 ## 收录站点
