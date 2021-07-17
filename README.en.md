@@ -7,7 +7,7 @@ MSYS2 mirrors in China
 ### Quick install
 
 ```shell
-( PKGVER=20210715 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
+( PKGVER=20210717 PKGREL=1 PKGFILN=pacman-mirrors-cn-${PKGVER}-${PKGREL}-any.pkg.tar.xz ; curl -L -o ${TMP}/${PKGFILN} https://github.com/ieu/msys2-mirrors-cn/releases/download/${PKGVER}-${PKGREL}/${PKGFILN} && pacman -U --needed --noconfirm ${TMP}/${PKGFILN} ; ( [ -f ${TMP}/${PKGFILN} ] && rm ${TMP}/${PKGFILN} ) )
 ```
 
 ### Use prebuilt package
@@ -95,3 +95,4 @@ makepkg
 * [NJU Open Source Mirrors](https://mirrors.nju.edu.cn/)
 * [Huawei Open Source Mirrors](https://mirrors.huaweicloud.com/)
 * [Tencent Software Source](https://mirrors.cloud.tencent.com/)
+* [Alibaba Open Source Mirrors](https://developer.aliyun.com/mirror/)

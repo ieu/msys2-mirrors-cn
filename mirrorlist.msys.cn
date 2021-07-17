@@ -9,3 +9,4 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/msys2/msys/$arch/
 Server = https://mirrors.nju.edu.cn/msys2/msys/$arch/
 Server = https://mirrors.huaweicloud.com/msys2/msys/$arch/
 Server = https://mirrors.cloud.tencent.com/msys2/msys/$arch/
+Server = https://mirrors.aliyun.com/msys2/msys/$arch/
