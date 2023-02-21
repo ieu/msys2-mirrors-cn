@@ -1,12 +1,16 @@
-##
-## Mingw-w64 repository mirrorlist
-##
+# See https://www.msys2.org/dev/mirrors
+# See also https://github.com/ieu/msys2-mirrors-cn
 
-## China
-Server = https://mirrors.ustc.edu.cn/msys2/mingw/$repo/
+## Tier 1
 Server = https://mirrors.bfsu.edu.cn/msys2/mingw/$repo/
+Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/$repo/
+Server = https://mirrors.ustc.edu.cn/msys2/mingw/$repo/
+Server = https://mirror.nju.edu.cn/msys2/mingw/$repo/
+Server = https://mirrors.hit.edu.cn/msys2/mingw/$repo/
+
+## Tier 2
 Server = https://mirrors.sjtug.sjtu.edu.cn/msys2/mingw/$repo/
-Server = https://mirrors.nju.edu.cn/msys2/mingw/$repo/
-Server = https://mirrors.huaweicloud.com/msys2/mingw/$repo/
-Server = https://mirrors.cloud.tencent.com/msys2/mingw/$repo/
+Server = https://mirrors.bit.edu.cn/msys2/mingw/$repo/
 Server = https://mirrors.aliyun.com/msys2/mingw/$repo/
+Server = https://mirror.iscas.ac.cn/msys2/mingw/$repo/
+Server = https://mirrors.tencent.com/msys2/mingw/$repo/

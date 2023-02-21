@@ -1,9 +1,13 @@
 post_install() {
-	sed -i -e '/^\[mingw32\]$/{
+	sed -i -e '/^\[clangarm64\]$/{
+		a Include = /etc/pacman.d/mirrorlist.mingw.cn
+	}'  -e '/^\[mingw32\]$/{
 		a Include = /etc/pacman.d/mirrorlist.mingw.cn
 	}' -e '/^\[mingw64\]$/{
 		a Include = /etc/pacman.d/mirrorlist.mingw.cn
 	}' -e '/^\[ucrt64\]$/{
+		a Include = /etc/pacman.d/mirrorlist.mingw.cn
+	}' -e '/^\[clang32\]$/{
 		a Include = /etc/pacman.d/mirrorlist.mingw.cn
 	}' -e '/^\[clang64\]$/{
 		a Include = /etc/pacman.d/mirrorlist.mingw.cn
@@ -13,11 +17,15 @@ post_install() {
 }
 
 post_remove() {
-	sed -i -e '/^\[mingw32\]$/,/^$/{
+	sed -i -e '/^\[clangarm64\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
+	}' -e '/^\[mingw32\]$/,/^$/{
 		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
 	}' -e '/^\[mingw64\]$/,/^$/{
 		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
 	}' -e '/^\[ucrt64\]$/,/^$/{
+		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
+	}' -e '/^\[clang32\]$/,/^$/{
 		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
 	}' -e '/^\[clang64\]$/,/^$/{
 		/^Include\s*=\s*\/etc\/pacman\.d\/mirrorlist\.mingw\.cn$/d
